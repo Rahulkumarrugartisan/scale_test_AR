@@ -455,7 +455,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const roughtness_texture = await modelViewerTexture1.createTexture("Material_Texture/Carpet013_4K_Roughness.jpg");
             const oc_texture = await modelViewerTexture1.createTexture("Material_Texture/Carpet013_4K_Displacement1_oc.png");
             if (material.pbrMetallicRoughness) {
-                
+                material.pbrMetallicRoughness.setMetallicFactor(.25);
+                material.pbrMetallicRoughness.setRoughnessFactor(1);
                 material.pbrMetallicRoughness.baseColorTexture.setTexture(texture);
                 material.normalTexture.setTexture(normal_texture);
                 material.pbrMetallicRoughness.metallicRoughnessTexture.setTexture(roughtness_texture);

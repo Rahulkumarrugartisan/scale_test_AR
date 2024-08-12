@@ -620,9 +620,9 @@ function till_uv_maps(current_default_tilling, model_scale) {
 
         console.log("texture got tilled: ", texture_tilling(6, model_scale));
         if (mr_sampler.scale.u.toString() != texture_tilling(6, model_scale)) {
-            mr_sampler.setScale({ u: texture_tilling(6, model_scale), v: texture_tilling(6, model_scale) });
-            nor_sampler.setScale({ u: texture_tilling(6, model_scale), v: texture_tilling(6, model_scale) });
-            oc_sampler.setScale({ u: texture_tilling(6, model_scale), v: texture_tilling(6, model_scale) });
+           // mr_sampler.setScale({ u: texture_tilling(6, model_scale), v: texture_tilling(6, model_scale) });
+           // nor_sampler.setScale({ u: texture_tilling(6, model_scale), v: texture_tilling(6, model_scale) });
+           // oc_sampler.setScale({ u: texture_tilling(6, model_scale), v: texture_tilling(6, model_scale) });
             console.log("texture got tilled: ", texture_tilling(6, model_scale));
             
         }

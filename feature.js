@@ -624,7 +624,7 @@ const info_interaction = document.querySelector('#info');
 function till_uv_maps(current_default_tilling, model_scale) {
     const is_sacling = trackScale(model_scale, 500);
     
-    info_interaction.textContent = `-------isScale: ${is_sacling()}`;
+    //info_interaction.textContent = `-------isScale: ${is_sacling()}`;
     if (mr_sampler != null && mr_sampler != null && oc_sampler != null && is_sacling() != true) {
 
         console.log("texture got tilled: ", texture_tilling(6, model_scale));
@@ -666,6 +666,7 @@ function updateScaleDisplay() {
 modelViewer.addEventListener('interact-stopped', (event) => {
 
     console.log('User is scaling the scene in AR mode. Current scale:', event.detail.status);
+    info_interaction.textContent = `-------isScale: ${event.detail.status}`;
     //const info_interaction = modelViewer.querySelector('#info');
    // scaleDisplay.textContent = `Scale: ${event.detail.status}%`;
     // Add any other actions you want to perform when scaling is detected

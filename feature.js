@@ -589,12 +589,13 @@ function trackScale(scale, delay = 500) {
     let isScaling = false;
     let scaleTimeout = null;
 
-    return function checkScale() {
+
         const currentScale = scale;
 
         // Check if the object is being scaled
         if (previousScale !== null && currentScale !== previousScale) {
-            isScaling = true;
+            previousScale = currentScale;
+             isScaling = true;
             clearTimeout(scaleTimeout);
 
             // After scaling stops, wait for the delay before changing the status
@@ -605,21 +606,28 @@ function trackScale(scale, delay = 500) {
 
             console.log('Object is being scaled');
         }
+        else {
+            // Update the previous scale
+            previousScale = currentScale;
+        }
+return isScaling;
 
-        // Update the previous scale
-        previousScale = currentScale;
-    };
+ 
 }
-
-function till_uv_maps(current_default_tilling,model_scale) {
-    const is_sacling=trackScale(model_scale,500);
-    if (mr_sampler != null && mr_sampler != null && oc_sampler != null && is_sacling!=true) {
+const info_interaction = document.querySelector('#info');
+function till_uv_maps(current_default_tilling, model_scale) {
+    const is_sacling = trackScale(model_scale, 500);
+    
+    info_interaction.textContent = `-------isScale: ${is_sacling}`;
+    if (mr_sampler != null && mr_sampler != null && oc_sampler != null && is_sacling != true) {
         console.log("texture got tilled: ", texture_tilling(6, model_scale));
         if (mr_sampler.scale.u.toString() != texture_tilling(6, model_scale)) {
-            mr_sampler.setScale({ u: texture_tilling(6,model_scale), v: texture_tilling(6,model_scale)});
-            nor_sampler.setScale({ u: texture_tilling(6,model_scale), v: texture_tilling(6,model_scale) });
-            oc_sampler.setScale({ u: texture_tilling(6,model_scale), v: texture_tilling(6,model_scale) });
+            mr_sampler.setScale({ u: texture_tilling(6, model_scale), v: texture_tilling(6, model_scale) });
+            nor_sampler.setScale({ u: texture_tilling(6, model_scale), v: texture_tilling(6, model_scale) });
+            oc_sampler.setScale({ u: texture_tilling(6, model_scale), v: texture_tilling(6, model_scale) });
             console.log("texture got tilled: ", texture_tilling(6, model_scale));
+            
+           
         }
     }
 }
@@ -632,17 +640,17 @@ function updateScaleDisplay() {
         const scalePercentage = (scale.x * 100).toFixed(0); // Assuming uniform scaling
         scale_temp = (scalePercentage - 100) / 100;
         temp_percentage = scalePercentage;
-       
+
         modelViewer.querySelector('button[slot="hotspot-hand"]').textContent =
             `${scalePercentage}%`;
 
         dimension_calculation();
         //console.log("model scale in ar mode: ", scale.x ,"An current uv tilling: ",nor_sampler.scale.u)
         /**Dynamic texture UV tilling in AR Mode */
-        if(is_ARmode)
-        {
-        till_uv_maps(nor_sampler.scale.u,scale.x);
-        }
+        //if (is_ARmode) {
+            till_uv_maps(nor_sampler.scale.u, scale.x);
+            
+        //}
 
     }
 
@@ -652,8 +660,8 @@ function updateScaleDisplay() {
 modelViewer.addEventListener('interact-stopped', (event) => {
 
     console.log('User is scaling the scene in AR mode. Current scale:', event.detail.status);
-    const info_interaction = modelViewer.querySelector('#info');
-    scaleDisplay.textContent = `Scale: ${event.detail.status}%`;
+    //const info_interaction = modelViewer.querySelector('#info');
+   // scaleDisplay.textContent = `Scale: ${event.detail.status}%`;
     // Add any other actions you want to perform when scaling is detected
 });
 

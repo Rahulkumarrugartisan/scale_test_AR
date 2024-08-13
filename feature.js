@@ -630,7 +630,7 @@ function check_is_Scaling(scale,delay)
 
 }
 
-
+let current_tilling=0;
 
 const info_interaction = document.querySelector('#info');
 // Call checkScale periodically, e.g., with a setInterval
@@ -639,7 +639,7 @@ setInterval(() => {
     //const isCurrentlyScaling = checkScale();
     const is_sacling = check_is_Scaling(modelViewer.cModelScale.x, 100);
   
-    info_interaction.textContent = `-------isScale: ${is_sacling} -----scale: ${modelViewer.cModelScale.x}-----DF: ${default_tilling}`;
+    info_interaction.textContent = `-------isScale: ${is_sacling} -----scale: ${modelViewer.cModelScale.x.toFixed(2)}-----DF: ${default_tilling} -----CF: ${current_tilling}`;
     console.log('Is scaling: ', is_Tilling, ' :: ', modelViewer.cModelScale.x);
 
 }, 100);
@@ -656,6 +656,7 @@ function till_uv_maps(current_default_tilling, model_scale) {
             nor_sampler.setScale({ u: texture_tilling(current_default_tilling, model_scale), v: texture_tilling(current_default_tilling, model_scale) });
             oc_sampler.setScale({ u: texture_tilling(current_default_tilling, model_scale), v: texture_tilling(current_default_tilling, model_scale) });
             console.log("texture got tilled: ", texture_tilling(current_default_tilling, model_scale));
+            current_tilling=current_default_tilling;
             is_Tilled=true;
             is_Tilling=true;
         }

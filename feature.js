@@ -628,10 +628,10 @@ function trackScale(scale, delay = 500) {
 
 const info_interaction = document.querySelector('#info');
 // Call checkScale periodically, e.g., with a setInterval
-const is_sacling = trackScale(modelViewer.cModelScale.x, 500);
+
 setInterval(() => {
     //const isCurrentlyScaling = checkScale();
-    
+    const is_sacling = trackScale(modelViewer.cModelScale.x, 500);
     const is_sacling_check = is_sacling();
         info_interaction.textContent = `-------isScale: ${is_sacling_check}`;
         console.log('Is scaling: ',is_sacling_check);

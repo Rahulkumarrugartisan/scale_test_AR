@@ -663,8 +663,7 @@ function updateScaleDisplay() {
         scale_temp = (scalePercentage - 100) / 100;
         temp_percentage = scalePercentage;
 
-        modelViewer.querySelector('button[slot="hotspot-hand"]').textContent =
-            `${scalePercentage}%`;
+        modelViewer.querySelector('button[slot="hotspot-hand"]').textContent = '${scalePercentage}%';
 
         dimension_calculation();
         //console.log("model scale in ar mode: ", scale.x ,"An current uv tilling: ",nor_sampler.scale.u)

@@ -634,7 +634,7 @@ setInterval(() => {
     //const isCurrentlyScaling = checkScale();
     const is_sacling = trackScale(modelViewer.cModelScale.x, 500);
     const is_sacling_check = is_sacling();
-        info_interaction.textContent = `-------isScale: ${is_sacling_check}`;
+        info_interaction.textContent = `-------isScale: ${is_sacling_check} -----scale: ${modelViewer.cModelScale.x}`;
         console.log('Is scaling: ',is_sacling_check,' :: ', modelViewer.cModelScale.x);
 
 }, 100);

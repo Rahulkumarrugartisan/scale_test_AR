@@ -516,9 +516,9 @@ async function get_set_MainTexture(rug_type, material_type, modeviewer, material
 
                 //till_uv_maps(parseFloat(getXScale(modelViewerTexture1.scale.toString())));
 
-                mr_sampler.setScale({ u: 1, v: 1 });
-                nor_sampler.setScale({ u: 1, v: 1 });
-                oc_sampler.setScale({ u: 1, v: 1 });
+                mr_sampler.setScale({ u: 2, v: 2 });
+                nor_sampler.setScale({ u: 2, v: 2 });
+                oc_sampler.setScale({ u: 2, v: 2 });
 
                 default_tilling = nor_sampler.scale.u;
             }

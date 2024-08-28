@@ -1024,7 +1024,7 @@ function check_is_Scaling(scale, delay) {
 let current_tilling = 0;
 /**|------------------------------------------|*/
 
-const info_interaction = document.querySelector('#info');
+//const info_interaction = document.querySelector('#info');
 // Call checkScale periodically, e.g., with a setInterval
 
 setInterval(() => {

@@ -1605,10 +1605,10 @@ document.addEventListener('DOMContentLoaded', () => {
         dimElements.forEach((element) => {
             element.classList.add('hide');
         });
-        checkboxui_bg.classList.add('hide');
-        checkboxui.classList.add('hide');
-        checkbox.classList.add('hide');
-        scale_per_UI.classList.add('hide');
+        //checkboxui_bg.classList.add('hide');
+        //checkboxui.classList.add('hide');
+        //checkbox.classList.add('hide');
+        //scale_per_UI.classList.add('hide');
 
         const currentUrl = window.location.href;
         const urlObject = new URL(currentUrl);

@@ -615,7 +615,7 @@ async function get_set_MainTexture(rug_type, material_type, modeviewer, material
                 material.normalTexture.setTexture(normal_texture);
                 material.pbrMetallicRoughness.metallicRoughnessTexture.setTexture(roughtness_texture);
                 material.occlusionTexture.setTexture(oc_texture);
-
+                material.normalTexture.needsUpdate = true;
      
                 nor_sampler = material.normalTexture.texture.sampler;
                 mr_sampler = material.pbrMetallicRoughness.metallicRoughnessTexture.texture.sampler;

@@ -1754,6 +1754,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Device Type:', getDeviceType());
             updateProgress(++currentStep,totalSteps);
             nor_m_texture=await createTiledTexture("Defalut_Maps/wool/wool_nor_n.png", 3, 3);
+            
             updateProgress(++currentStep,totalSteps);
             mr_m_texture=await createTiledTexture("Defalut_Maps/wool/SpecularMap.png", 3, 3);
             updateProgress(++currentStep,totalSteps);

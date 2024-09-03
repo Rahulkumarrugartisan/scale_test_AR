@@ -263,15 +263,7 @@ function change_Rug_Shape(shapename, model) {
         //console.log("shape changed to: " + shapename);
     }
     else if (shapename === "arch") {
-        if (getDeviceType()==='iOS')
-        {
-            model.src = "rug_Models/arch.usdz";
-        }
-        else{
             model.src = "rug_Models/arch.glb";
-        }
-        
-        
        // console.log("shape changed to: " + shapename);
     }
     else if (shapename === "runner") {

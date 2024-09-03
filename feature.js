@@ -1742,7 +1742,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             console.log('Device Type:', getDeviceType());
             updateProgress(++currentStep,totalSteps);
-            nor_m_texture=await createTiledTexture("Defalut_Maps/silk/Silk_nor.png", 2, 2);
+            nor_m_texture=await createTiledTexture("Defalut_Maps/silk/Silk_nor_n.png", 2, 2);
             updateProgress(++currentStep,totalSteps);
             mr_m_texture=await createTiledTexture("Defalut_Maps/silk/Silk_mr.png", 2, 2);
             updateProgress(++currentStep,totalSteps);

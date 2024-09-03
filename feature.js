@@ -545,7 +545,7 @@ async function get_set_MainTexture(rug_type, material_type, modeviewer, material
             updateProgress(++currentStep, totalSteps);
             const texture = await modeviewer.createTexture(textureURL);
             updateProgress(++currentStep, totalSteps);
-            const normal_texture = await modeviewer.createTexture("Defalut_Maps/silk/Silk_nor.png");
+            const normal_texture = await modeviewer.createTexture("Defalut_Maps/silk/Silk_nor_n.png");
             updateProgress(++currentStep, totalSteps);
             const roughtness_texture = await modeviewer.createTexture("Defalut_Maps/silk/Silk_mr.png");
             updateProgress(++currentStep, totalSteps);
@@ -640,7 +640,7 @@ async function get_set_MainTexture(rug_type, material_type, modeviewer, material
             updateProgress(++currentStep, totalSteps);
             const texture = await modeviewer.createTexture(textureURL);
             updateProgress(++currentStep, totalSteps);
-            const normal_texture = await modeviewer.createTexture("Defalut_Maps/silk/Silk_nor.png");
+            const normal_texture = await modeviewer.createTexture("Defalut_Maps/silk/Silk_nor_n.png");
             updateProgress(++currentStep, totalSteps);
             const roughtness_texture = await modeviewer.createTexture("Defalut_Maps/silk/Silk_mr.png");
             updateProgress(++currentStep, totalSteps);

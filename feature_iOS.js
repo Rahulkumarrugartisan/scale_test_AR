@@ -77,6 +77,7 @@ function getDeviceType() {
         const tilled_texture = material[channel].texture.sampler;
         tilled_texture.setScale({ u: 3, v: 3 });
         }
+          material.needUpdate=true;
       }
 
       document.querySelector('#diffuse').addEventListener('input', (event) => {

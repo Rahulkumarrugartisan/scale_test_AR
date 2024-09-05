@@ -72,6 +72,7 @@ function getDeviceType() {
         } else {
           material[channel].setTexture(texture);
         }
+          
         if(channel==='normalTexture'){
         const tilled_texture = material[channel].texture.sampler;
         tilled_texture.setScale({ u: 3, v: 3 });

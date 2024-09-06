@@ -596,16 +596,16 @@ async function iOS_setMainTexture(rug_type, material_type, modeviewer, material,
                 }
                 // material.normalTexture.setTexture(normal_texture);
                 if ('metallicRoughnessTexture'.includes('base') || 'metallicRoughnessTexture'.includes('metallic')) {
-                    material.pbrMetallicRoughness['metallicRoughnessTexture'].setTexture(roughtness_texture);
+                   // material.pbrMetallicRoughness['metallicRoughnessTexture'].setTexture(roughtness_texture);
                 } else {
-                    material['metallicRoughnessTexture'].setTexture(roughtness_texture);
+                   // material['metallicRoughnessTexture'].setTexture(roughtness_texture);
                 }
                 //material.pbrMetallicRoughness.metallicRoughnessTexture.setTexture(roughtness_texture);
 
                 if ('occlusionTexture'.includes('base') || 'occlusionTexture'.includes('metallic')) {
-                    material.pbrMetallicRoughness['occlusionTexture'].setTexture(oc_texture);
+                   // material.pbrMetallicRoughness['occlusionTexture'].setTexture(oc_texture);
                 } else {
-                    material['occlusionTexture'].setTexture(oc_texture);
+                   // material['occlusionTexture'].setTexture(oc_texture);
                 }
             }
         }

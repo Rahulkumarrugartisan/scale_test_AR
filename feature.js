@@ -599,6 +599,7 @@ async function iOS_setMainTexture(rug_type, material_type, modeviewer, material,
                 } else {
                     //material['normalTexture'].setTexture(normal_texture);
                 }
+                
                 // material.normalTexture.setTexture(normal_texture);
                 if ('metallicRoughnessTexture'.includes('base') || 'metallicRoughnessTexture'.includes('metallic')) {
                     material.pbrMetallicRoughness['metallicRoughnessTexture'].setTexture(roughtness_texture);

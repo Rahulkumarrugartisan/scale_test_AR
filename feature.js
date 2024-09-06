@@ -595,9 +595,9 @@ async function iOS_setMainTexture(rug_type, material_type, modeviewer, material,
                 //material.pbrMetallicRoughness.baseColorFactor = [1, 1, 1, 0.5]; // Setting alpha (opacity)
                 //material.alphaMode = 'BLEND';
                 if ('normalTexture'.includes('base') || 'normalTexture'.includes('metallic')) {
-                    material.pbrMetallicRoughness['normalTexture'].setTexture(normal_texture);
+                    //material.pbrMetallicRoughness['normalTexture'].setTexture(normal_texture);
                 } else {
-                    material['normalTexture'].setTexture(normal_texture);
+                    //material['normalTexture'].setTexture(normal_texture);
                 }
                 // material.normalTexture.setTexture(normal_texture);
                 if ('metallicRoughnessTexture'.includes('base') || 'metallicRoughnessTexture'.includes('metallic')) {

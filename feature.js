@@ -1440,8 +1440,8 @@ modelViewer.addEventListener('interact-stopped', (event) => {
     /**Add any other actions you want to perform when scaling is detected*/
 });
 
-modelViewer.addEventListener('load', updateScaleDisplay);
-modelViewer.addEventListener('camera-change', updateScaleDisplay);
+//modelViewer.addEventListener('load', updateScaleDisplay);
+//modelViewer.addEventListener('camera-change', updateScaleDisplay);
 
 /**|------------------------------------------------------|
 *--|-----Model size calculation and size UI update--------|
@@ -1892,7 +1892,7 @@ function load() {
 document.addEventListener('DOMContentLoaded', () => {
     const modelViewerTexture1 = document.querySelector("#model");
 
-    modelViewerTexture1.addEventListener("load", async () => {
+    modelViewerTexture1.addEventListener('load', async () => {
         /**|-----------------------------------------------| 
         *--|----get data from URL--------------------------|
         *--|-----------------------------------------------| */
@@ -2017,7 +2017,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         updateProgress(++currentStep, totalSteps);
         await scale_change(size, with_size, length_size, rugType);
-
+        updateScaleDisplay();
         dimension_calculation();
         renderSVG();
         //modelViewer1.updateFraming();

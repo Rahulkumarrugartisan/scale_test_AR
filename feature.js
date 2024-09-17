@@ -2011,6 +2011,7 @@ document.addEventListener('DOMContentLoaded', () => {
          * |-----input got from the user (which is comming from the url)---|
          * |---------------------------------------------------------------|*/
         modelViewerTexture1.scale = `${1} ${1} ${1}`;
+        
         updateProgress(++currentStep, totalSteps);
         await scale_change(size, with_size, length_size, rugType);
 

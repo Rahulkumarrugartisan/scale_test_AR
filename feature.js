@@ -1982,7 +1982,7 @@ document.addEventListener('DOMContentLoaded', () => {
             /**|--------------------------------------------------------------------|
              *-|---Main texure maps (Base, Normal, Rougthness and Occlusion maps)---|
              *-|--------------------------------------------------------------------|*/
-            updateProgress(++currentStep, totalSteps);
+           // updateProgress(++currentStep, totalSteps);
 
             console.debug("device type: ", getDeviceType());
 
@@ -2008,7 +2008,7 @@ document.addEventListener('DOMContentLoaded', () => {
          * |-----Changing scale of the rug accourding to the---------------| 
          * |-----input got from the user (which is comming from the url)---|
          * |---------------------------------------------------------------|*/
-        modelViewerTexture1.scale = `${1} ${1} ${1}`;
+        //modelViewerTexture1.scale = `${1} ${1} ${1}`;
         updateProgress(++currentStep, totalSteps);
         await scale_change(size, with_size, length_size, rugType);
 

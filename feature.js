@@ -1930,7 +1930,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //console.log("Getting the params: ", shape_param, ' ', size, ' ', with_size, ' ', length_size, ' ', rug_Type, ' ', material_Type);
 
         change_Rug_Shape(shape_param, modelViewerTexture1);
-        modelViewerTexture1.scale = `${1} ${1} ${1}`;
+       // modelViewerTexture1.scale = `${1} ${1} ${1}`;
         /**|------------------------------------------------------------------------------------|*/
         /**|------------------------------------------------------------------------------------|*/
         //kjhkjhhjh
@@ -1985,6 +1985,7 @@ document.addEventListener('DOMContentLoaded', () => {
            // updateProgress(++currentStep, totalSteps);
 
             console.debug("device type: ", getDeviceType());
+        updateProgress(++currentStep, totalSteps);
 
             if (getDeviceType() === 'iOS') {
                 await iOS_setMainTexture(rug_Type, material_Type, modelViewerTexture1, material, newTextureUrl);

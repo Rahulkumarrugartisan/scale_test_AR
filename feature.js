@@ -1241,7 +1241,7 @@ async function scale_change(parameter, user_width, user_length, rugtype) {
             modelViewer1.scale = `${u_length} ${.8} ${u_width}`;
             console.debug("set scale is working");
         }
-        else if (rugtype === "handknotted" || rugtype === "flatweave") {
+        else if (rugtype === "handknotted") {
             modelViewer1.scale = `${u_length} ${.1} ${u_width}`;
         }
         modelViewer1.updateFraming();

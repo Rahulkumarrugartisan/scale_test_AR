@@ -1941,7 +1941,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             /** Ensuring the model is fully loaded*/
             const model = modelViewerTexture1.model;
-            modelViewerTexture1.scale = `${1} ${1} ${1}`;
+           // modelViewerTexture1.scale = `${1} ${1} ${1}`;
             if (!model) {
                 console.error('Model not found');
                 return;
@@ -1985,7 +1985,7 @@ document.addEventListener('DOMContentLoaded', () => {
            // updateProgress(++currentStep, totalSteps);
 
             console.debug("device type: ", getDeviceType());
-        updateProgress(++currentStep, totalSteps);
+       
 
             if (getDeviceType() === 'iOS') {
                 await iOS_setMainTexture(rug_Type, material_Type, modelViewerTexture1, material, newTextureUrl);

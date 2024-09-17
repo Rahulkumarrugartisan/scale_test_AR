@@ -1241,7 +1241,10 @@ async function scale_change(parameter, user_width, user_length, rugtype) {
             modelViewer1.scale = `${u_length} ${.8} ${u_width}`;
             console.debug("set scale is working");
         }
-        else if (rugtype === "handknotted") {
+        if (rugtype === "handknotted") {
+            modelViewer1.scale = `${u_length} ${.1} ${u_width}`;
+        }
+         if (rugtype === "flatweave") {
             modelViewer1.scale = `${u_length} ${.1} ${u_width}`;
         }
         modelViewer1.updateFraming();
@@ -1851,10 +1854,10 @@ function dimension_calculation() {
  * |------ui off and calculating dimension and rendering the svg line's--------------------|
  * |---------------------------------------------------------------------------------------|
  */
-modelViewer.addEventListener('load', () => {
+//modelViewer.addEventListener('load', () => {
 
 
-});
+//});
 /**|----------------------------------------------------------|
  * |--this function shows the progress of the scene when------|
  * |--first load and when model changed-----------------------|

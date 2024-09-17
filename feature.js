@@ -1986,7 +1986,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             console.debug("device type: ", getDeviceType());
        
-
+            updateProgress(++currentStep, totalSteps);
+            
             if (getDeviceType() === 'iOS') {
                 await iOS_setMainTexture(rug_Type, material_Type, modelViewerTexture1, material, newTextureUrl);
             }

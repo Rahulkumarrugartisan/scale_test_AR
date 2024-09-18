@@ -1203,7 +1203,8 @@ function set_rug_scale_size(parameter, width, length, defualtRug_widht, defaultR
         updated_length = length_final_val;
         size_para_format = "cm";
     }
-   if(isUpdated===false)
+    
+    if(isUpdated===false)
     {
     u_width = updated_width;
     u_length = updated_length;
@@ -1251,6 +1252,7 @@ async function scale_change(parameter, user_width, user_length, rugtype) {
          if (rugtype === "flatweave") {
             modelViewer1.scale = `${u_length} ${.1} ${u_width}`;
         }
+        
        modelViewer1.updateFraming();
 
         console.debug("updated scale after scaling: ", " length: ", u_length, " width: ", u_width);

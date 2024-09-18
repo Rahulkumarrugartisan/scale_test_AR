@@ -1158,7 +1158,7 @@ async function get_set_backTexture(rug_type, modelviewer, material, textureURL, 
 let size_para_format = 'cm';
 let u_width = 0;
 let u_length = 0;
-
+let isUpdated=false;
 function set_rug_scale_size(parameter, width, length, defualtRug_widht, defaultRug_length) {
 
     let updated_width = 0;
@@ -1203,8 +1203,12 @@ function set_rug_scale_size(parameter, width, length, defualtRug_widht, defaultR
         updated_length = length_final_val;
         size_para_format = "cm";
     }
+   if(isUpdated===false)
+    {
     u_width = updated_width;
     u_length = updated_length;
+    isUpdated=true;
+    }
 }
 
 function claculate_scale_percentage(val, default_val) {

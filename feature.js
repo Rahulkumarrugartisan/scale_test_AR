@@ -1251,7 +1251,7 @@ async function scale_change(parameter, user_width, user_length, rugtype) {
          if (rugtype === "flatweave") {
             modelViewer1.scale = `${u_length} ${.1} ${u_width}`;
         }
-      
+       modelViewer1.updateFraming();
 
         console.debug("updated scale after scaling: ", " length: ", u_length, " width: ", u_width);
     }

@@ -1379,14 +1379,14 @@ function check_is_Scaling(scale, delay) {
 let current_tilling = 0;
 /**|------------------------------------------|*/
 
-//const info_interaction = document.querySelector('#info');
+const info_interaction = document.querySelector('#info');
 /** Call checkScale periodically, e.g., with a setInterval */
 
 setInterval(() => {
     //const isCurrentlyScaling = checkScale();
     const is_sacling = check_is_Scaling(modelViewer.cModelScale.x, 100);
 
-    //info_interaction.textContent = `---isScale: ${is_sacling} scale:: ${model_scale_percentage_AR_Mode} DF: ${default_tilling} CF: ${current_tilling}`;
+    info_interaction.textContent = `---isScale: ${is_sacling} scale:: ${model_scale_percentage_AR_Mode} DF: ${default_tilling} CF: ${current_tilling}`;
     //console.log('Is scaling: ', is_Tilling, ' :: ', modelViewer.cModelScale.x);
 
 }, 100);

@@ -2036,6 +2036,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 });
+modelViewer1.addEventListener('camera-change', updateScaleDisplay);
 modelViewer1.addEventListener('camera-change', renderSVG);
 
 /**|-----------------------------------------------------------|

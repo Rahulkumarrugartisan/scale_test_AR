@@ -1385,6 +1385,7 @@ const info_interaction = document.querySelector('#info');
 setInterval(() => {
     //const isCurrentlyScaling = checkScale();
     const is_sacling = check_is_Scaling(modelViewer.cModelScale.x, 100);
+    
     info_interaction.textContent = `---isScale: ${is_sacling} scale:: ${model_scale_percentage_AR_Mode} DF: ${default_tilling} CF: ${current_tilling}`;
     //console.log('Is scaling: ', is_Tilling, ' :: ', modelViewer.cModelScale.x);
 

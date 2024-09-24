@@ -63541,4 +63541,4 @@ const ModelViewerElement = AnnotationMixin(SceneGraphMixin(StagingMixin(Environm
 customElements.define('model-viewer', ModelViewerElement);
 
 export { CanvasTexture, FileLoader, Loader, ModelViewerElement, NearestFilter };
-//# sourceMappingURL=model-viewer.js.map
+/*-----// sourceMappingURL=model-viewer.js.map-----*/

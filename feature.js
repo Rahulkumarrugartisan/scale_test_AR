@@ -1001,7 +1001,7 @@ async function get_set_backTexture(rug_type, modelviewer, material, textureURL, 
         const b_t_Main = "Back_texture/Fabric_Pattern_04_ambientocclusion.jpg";
         const b_t_border = "Defalut_Maps/border_logo.png";
         let final_main_backTexture = b_t_Main;
-        if (shape_param !== "arch" && shape_param !== "capsule" && shape_param !== "drop" && shape_param !== "ogee" && shape_param !== "oval" && shape_param !== "diamond" && shape_param != "splash" && shape_param != "hexagon") {
+        if (shape_param !== "arch" && shape_param !== "capsule" && shape_param !== "drop" && shape_param !== "ogee" && shape_param !== "oval" && shape_param !== "diamond" && shape_param != "splash" && shape_param != "hexagon" shape_param != "round" shape_param != "eight" shape_param != "oblong" shape_param != "splash") {
             //console.log("-----------------I am running-----------------thats not good(now script changed):::: ", shape_param);
             if (shape_param === "runner!" || shape_param === "runner") {
                 final_main_backTexture = await createTiledTextureWithOverlay(b_t_Main, b_t_border, 2, 4);/**with the texture sampler tilling we need to set tilling in this function also */
